@@ -1,0 +1,21 @@
+server:
+  port: 60
+db:
+  port: 3306
+  name: mobilestoredb
+  endpoint: 45.117.170.206
+  username: mobilestore.production
+  password: Abc@13579
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${db.endpoint}:${db.port}/${db.name}
+    username: ${db.username}
+    password: ${db.password}
+url:
+  redirect:
+    path: ${domain.path}
+domain:
+  path: http://jobsit.vn/
